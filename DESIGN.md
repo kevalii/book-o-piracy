@@ -2,15 +2,15 @@
 
 ## Contents
 1. [Preliminaries](#preliminaries)
-2. [`app.py`](#`app.py`)
+2. [`app.py`](#apppy)
 	1. [Config](#config)
 	2. [DB Setup](#db-setup)
 	3. [Flask Routes](#flask-routes)
-3. [`tools/messaging.py`](#tools/messaging.py)
+3. [`tools/messaging.py`](#toolsmessagingpy)
 	1. [Sendgrid](#sendgrid)
 	2. [Messaging Functions](#messaging-functions)
-3. [`tools/translate.py`](#tools/translate.py)
-4. [`tools/doc.py`](#tools/doc.py)
+3. [`tools/translate.py`](#toolstranslatepy)
+4. [`tools/doc.py`](#toolsdocpy)
 	1. [Doc Functions](#doc-functions)
 
 ## DESIGN for CS50
