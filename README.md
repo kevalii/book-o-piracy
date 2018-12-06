@@ -45,9 +45,9 @@ OR, if you'd prefer to see the exact changes below,
 	file.write(text)
 	```
 
-These changes will enable you to run the site on localhost, but without the translation component (since it requires an API key) nor the messaging component.
+These changes will enable you to run the site on localhost by simply running `gunicorn app:app` and then navigating to `localhost:8000`, but the site will not have the translation component (since it requires an API key) nor the messaging component.
 
-If you'd like to test the site with a roughly equivalent messaging component, you could do the following:
+However, if you'd like to test the site with a roughly equivalent messaging component, you could do the following:
 
 1. Modify line 5 of `app.py` so that it looks like
 ```python
