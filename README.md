@@ -18,6 +18,7 @@ I'm unfortunately unable to share the contents of the Postgres database, because
 	4. Enter `\q` to quit once more
 Then either:
 2. Clone a repo containing the source code as modified in below by running `git clone https://github.com/kevalii/piracytest.git` in bash while in some directory.
+3. [Run the app](#running)
 
 OR, if you'd prefer to see the exact changes below,
 
@@ -45,8 +46,6 @@ OR, if you'd prefer to see the exact changes below,
 	file.write(text)
 	```
 
-These changes will enable you to run the site on localhost by simply running `gunicorn app:app` and then navigating to `localhost:8000`, but the site will not have the translation component (since it requires an API key) nor the messaging component.
-
 However, if you'd like to test the site with a roughly equivalent messaging component, you could do the following:
 
 1. Modify line 5 of `app.py` so that it looks like
@@ -70,6 +69,7 @@ If you *really, really* need to test the translation component for some reason, 
 headers = {'X-FunTranslations-Api-Secret': API-KEY-HERE}
 ```
 
-The above, excluding the translation API key, should be enough to run the website locally and test most everything except for the translation component.
+### Running
+The above, excluding the translation API key, should be enough to run the website locally by running `gunicorn app:app` while cd'd into the app root. This will allow you to test most everything except for the translation component.
 
 There is a config file for the application exclusively on the Heroku Git repo that is solely used to retrieve different API keys and credentials when the app is hosted on Heroku, so I'm omitting it from this source code. 
