@@ -1,13 +1,21 @@
 # Book O' Piracy
 ## for CS50
 
+## Contents
+1. [Preliminaries](#preliminaries)
+2. [Testing Setup](#testing-setup)
+3. [Running](#running)
+4. [User Story](#user-story)
+
 ### Preliminaries
 Book O' Piracy is a website built on Flask and run on Gunicorn that at its core uses a translation API to convert user-inputted text in "pirate speak" and send to a specified email address(es). The production website can be found at [Book O' Piracy](https://book-o-piracy.herokuapp.com/). As the url might suggest, the app is hosted on Heroku and deployed using Heroku Git, although the project has a separate [GitHub repo](https://github.com/kevalii/book-o-piracy) that is updated alongside the website. 
 
-Because the app and its components were written in mind with deployment on Heroku, running the app locally requires some setup, and the messaging (and to a lesser extent the database) functionality of the app will be lost since it inherently relies on integration with certain Heroku addons (SendGrid and Heroku Postgresql).
+Because the app and its components were written in mind with deployment on Heroku, running the app locally requires some setup, and the messaging (and to a lesser extent the database) functionality of the app will be lost since it inherently relies on integration with certain Heroku addons (SendGrid and Heroku PostgreSQL).
 
 I'm unfortunately unable to share the contents of the Postgres database, because
+
 ...a) the database is stored on Heroku's servers and cannot be locally stored, which was primarily motivated by how
+
 ...b) storing the database within application root itself is just generally bad practice.
 
 ### Testing Setup
@@ -73,3 +81,14 @@ headers = {'X-FunTranslations-Api-Secret': API-KEY-HERE}
 The above, excluding the translation API key, should be enough to run the website locally by running `gunicorn app:app` while cd'd into the app root. This will allow you to test most everything except for the translation component.
 
 There is a config file for the application exclusively on the Heroku Git repo that is solely used to retrieve different API keys and credentials when the app is hosted on Heroku, so I'm omitting it from this source code. 
+
+### User Story
+Users begin at the index of the site. 
+
+From there they navigate to the translate page, enter a message, format it using the rudimentary editor provided, enter an email address(es) to send it to, enter some text in the from line, and optionally upload a .docx or .txt file. If a file of some other type is inputted, the file will be discarded.
+
+The preview page enables them to study the translation that their formatted message returned from the translation API and review the rest of the form data; however, they cannot preview the translation of their file. 
+
+After the user confirms the message once more, the message is sent off the email address(es) that the user specified. The message is then added to the database and displayed alongside other messages on the index page.
+
+
