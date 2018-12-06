@@ -1,11 +1,12 @@
 # Book O' Piracy
-## README for CS50
 
 ## Contents
 1. [Preliminaries](#preliminaries)
 2. [Testing Setup](#testing-setup)
 3. [Running](#running)
 4. [User Story](#user-story)
+
+## README for CS50
 
 ### Preliminaries
 Book O' Piracy is a website built on Flask and run on Gunicorn that at its core uses a translation API to convert user-inputted text in "pirate speak" and send to a specified email address(es). The production website can be found at [Book O' Piracy](https://book-o-piracy.herokuapp.com/). As the url might suggest, the app is hosted on Heroku and deployed using Heroku Git, although the project has a separate [GitHub repo](https://github.com/kevalii/book-o-piracy) that is updated alongside the website. 

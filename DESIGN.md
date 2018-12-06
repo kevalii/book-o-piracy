@@ -1,5 +1,4 @@
 # Design
-## DESIGN for CS50
 
 ## Contents
 1. [Preliminaries](#preliminaries)
@@ -7,14 +6,14 @@
 	1. [Config](#config)
 	2. [DB Setup](#db-setup)
 	3. [Flask Routes](#flask-routes)
-3. [`tools/messaging.py`](#`tools/messaging.py`)
+3. [`tools/messaging.py`](#tools/messaging.py)
 	1. [Sendgrid](#sendgrid)
 	2. [Messaging Functions](#messaging-functions)
-3. [`tools/translate.py`](#`tools/translate.py`)
-4. [`tools/doc.py`](#`tools/doc.py`)
-	1. [Doc Functions](#`doc-functions`)
+3. [`tools/translate.py`](#tools/translate.py)
+4. [`tools/doc.py`](#tools/doc.py)
+	1. [Doc Functions](#doc-functions)
 
-
+## DESIGN for CS50
 ### Preliminaries
 
 In my project proposal, I wrote that users would be able to login and have access to a personal history of messages. I ultimately decided against including this feature because while it would've been rather simple to implement, it was an unnecessary obstruction to the ideal user story. Why would someone take the trouble of signing up to use what is essentially a joke site? And if most users will end up using the site only once, then does it really make sense to implement a login feature and personalized history?
