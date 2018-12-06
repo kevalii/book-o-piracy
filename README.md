@@ -1,10 +1,11 @@
 # Book O' Piracy
 
 ## Contents
-1. [Preliminaries](#preliminaries)
-2. [Testing Setup](#testing-setup)
-3. [Running](#running)
-4. [User Story](#user-story)
+1. [Demo](#demo)
+2. [Preliminaries](#preliminaries)
+3. [Testing Setup](#testing-setup)
+4. [Running](#running)
+5. [User Story](#user-story)
 
 ## README for CS50
 
