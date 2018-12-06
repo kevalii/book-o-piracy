@@ -18,7 +18,9 @@ I'm unfortunately unable to share the contents of the Postgres database, because
 	4. Enter `\q` to quit once more
 Then either:
 2. Clone a repo containing the source code as modified in below by running `git clone https://github.com/kevalii/piracytest.git` in bash while in some directory.
+
 OR, if you'd prefer to see the exact changes below,
+
 2. Clone the primary repo and obtain the source code by running `git clone https://github.com/kevalii/book-o-piracy.git` in bash while in some directory.
 3. In the root directory of the cloned project, install the dependencies described in requirements.txt via `pip install -r requirements.txt` (You may want to setup a virtualenv for this step).
 3. Then
