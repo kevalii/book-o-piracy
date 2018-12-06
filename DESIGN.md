@@ -12,6 +12,7 @@
 3. [`tools/translate.py`](#toolstranslatepy)
 4. [`tools/doc.py`](#toolsdocpy)
 	1. [Doc Functions](#doc-functions)
+5. [`static/editor.js`](#staticeditorjs)
 
 ## DESIGN for CS50
 ### Preliminaries
@@ -65,4 +66,12 @@ It queries the translation API and returns the translated message.
 
 `escape` replaces any newlines and replaces it with `<br>`. The translation API refuses to return a translation when a request contains newlines (probably to nullify malicious inputs), so we must ecsape the newlines out of a message before sending it off. This is not really necessary in `get_docx` but is crucial to `get_text` and translating the main message in `app.py`.
 
+### `static/editor.js`
+
+This handles the editor and the dynamic preview features.
+
+#### Editor Functions
+`updatePreview` gets the text from the textarea (id `translation_text`) containing the user-inputted message and displays it as HTML in the `format-preview` div. This function is called in `getActiveText` after the addition of HTML tags to reflect the formatting of the updated text and is also called whenever the document initializes (for displaying formatted translated text in `preview.html`).
+
+`getActiveText` gets the selected text in the textarea and prepends/appends the appropriate HTMl tags according to the value in `arg`. This function is called whenever a button is clicked in `translate.py`.
 
