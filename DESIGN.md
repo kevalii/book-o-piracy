@@ -13,6 +13,7 @@
 4. [`tools/doc.py`](#toolsdocpy)
 	1. [Doc Functions](#doc-functions)
 5. [`static/editor.js`](#staticeditorjs)
+	1. [Editor Functions](#editor-functions)
 
 ## DESIGN for CS50
 ### Preliminaries
