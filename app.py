@@ -42,6 +42,7 @@ def check_file(filename):
 # Message model
 class Message(db.Model):
 	__tablename__ = 'messages'
+	# Fields
 	id = db.Column(db.Integer, primary_key=True)
 	translation = db.Column(db.Text, nullable=False)
 	time = db.Column(db.DateTime, nullable=False)

@@ -1,5 +1,5 @@
 # Book O' Piracy
-## for CS50
+## README for CS50
 
 ## Contents
 1. [Preliminaries](#preliminaries)
@@ -14,9 +14,9 @@ Because the app and its components were written in mind with deployment on Herok
 
 I'm unfortunately unable to share the contents of the Postgres database, because
 
-...a) the database is stored on Heroku's servers and cannot be locally stored, which was primarily motivated by how
+* the database is stored on Heroku's servers and cannot be locally stored, which was primarily motivated by how
 
-...b) storing the database within application root itself is just generally bad practice.
+* storing the database within application root itself is just generally bad practice.
 
 ### Testing Setup
 1. Install [PostgreSQL](https://www.postgresql.org/), make sure PostgreSQL is online, and initialize a database named 'translations' in psql bash session by entering `psql` and then `createdb translations`
