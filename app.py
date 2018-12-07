@@ -59,6 +59,10 @@ class Message(db.Model):
 @app.route('/')
 def index():
 	session.pop('message', None)
+	# Refresh page if message cookie until it's popped
+	if not session.get('message'):
+		redirect(url_for('index'))
+
 	# Get sorted 'messages' table and pass into index.html
 	sorted_query = Message.query.order_by(Message.time.desc()).all()
 	data = list()
